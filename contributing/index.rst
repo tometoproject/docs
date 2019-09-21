@@ -44,11 +44,6 @@ Pull Requests are how we usually land code for Tometo. We use a simple model,
 where every contributor pushes changes either to their fork or to a branch on the main repository,
 and then brings those changes into the master branch.
 
-Keep in mind this refers to Mercurial's *named branches*, not bookmarks. We think it's worth
-going with named branches for the sake of familiarity of Git users.
-
-*(Please make Pull Requests against the `default` branch)*
-
 Always make sure that your code conforms to the style guidelines by running the following:
 
 .. code-block:: shell
