@@ -5,6 +5,7 @@ Welcome to Tometo's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   installation/index
    contributing/index
    conduct/index
 
