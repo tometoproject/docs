@@ -58,5 +58,5 @@ Issue Triage
 Issues on the bug tracker can be for different *trackers*, and have other configuration options. Here's some notes on them:
 
 - Don't set a priority unless you know what you're doing
-- The `Epic` tracker refers to issues that track a multitude of other issues,
+- The ``Epic`` tracker refers to issues that track a multitude of other issues,
   e.g. for a large feature
