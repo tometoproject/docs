@@ -19,7 +19,14 @@ prerequisites:
   (plus development headers, sometimes separate as ``python3-devel``)
 - eSpeak (and its development headers, sometimes separate as ``espeak-devel``)
 - FFmpeg
-- The Google Cloud SDK
+
+Optionally, there's some more advanced features you can enable, which need some of these dependencies:
+
+- A Google Cloud service account JSON key somewhere on your machine
+- A S3 bucket
+
+.. note::
+   These still need to be documented properly.
 
 Automatic Installation
 ----------------------
