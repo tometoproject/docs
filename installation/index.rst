@@ -36,9 +36,9 @@ setup script:
 
 .. code-block:: shell
 
-   git clone ssh://git@marie.marisa.cloud:222/t/tometo.git
+   git clone git@github.com:tometoproject/tometo.git
    # or with HTTPS
-   git clone https://marie.marisa.cloud/t/tometo.git
+   git clone https://github.com/tometoproject/tometo.git
    cd tometo/
    script/localsetup
 
@@ -71,7 +71,7 @@ Then, you can clone the repository.
 
 .. code-block:: shell
 
-   git clone https://marie.marisa.cloud/t/tometo
+   git clone https://github.com/tometoproject/tometo
 
 Once you're in the directoy, you'll want to install the dependencies:
 

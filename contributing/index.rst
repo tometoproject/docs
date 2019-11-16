@@ -27,7 +27,7 @@ It also makes our lives much easier if the issue title is as descriptive as poss
 This can be the specific error message given, the steps you used to reproduce it, or
 something else that's unique to the bug you're experiencing.
 
-Filing a bug report happens on our bug tracker, and you can find a link to create a new issue `here <https://bugs.marisa.cloud/projects/tometo/issues/new>`_.
+Filing a bug report happens on our bug tracker, and you can find a link to create a new issue `here <https://github.com/tometoproject/tometo/issues/new>`_.
 
 If you're running Tometo locally, please include as much information as possible about your setup,
 what Rust version you use, what Node version, your operating system, stack traces, et cetera.
