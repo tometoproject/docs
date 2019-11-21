@@ -28,7 +28,7 @@ much simpler. The signature that you generate *always* leads back to you
 by way of your public key. Current public keys are listed here:
 
 - `Marisa <https://github.com/fmoko>`_:
-  ``RWSOPopFko/YfOOJLGSLQ8wYjGsirt3cuPyTlMptym6K1e3ulPux1Lvx**
+  ``RWSOPopFko/YfOOJLGSLQ8wYjGsirt3cuPyTlMptym6K1e3ulPux1Lvx``
 
 Architectures
 ^^^^^^^^^^^^^
