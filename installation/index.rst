@@ -2,8 +2,8 @@ Installation
 ============
 
 Tometo is functionally split into two parts — the frontend, which is a Vue.js
-app that's kept in this repository, and the backend, which is a Rust app that's
-kept in the ``./otemot`` folder.
+app that's kept in the ``./ui``, and the backend called Aph, which is an Elixir app that's
+kept in the ``./aph`` folder.
 
 Prerequisites
 -------------
@@ -13,8 +13,8 @@ prerequisites:
 
 - Git
 - A PostgreSQL server, and its development headers (sometimes called ``libpq-dev`` or ``postgresql-devel``)
+- Elixir (and Erlang, but usually those two are installed side-by-side)
 - Node.js, the latest LTS or Stable version should work
-- Rust (the correct nightly version should automatically install)
 - Python 3 and ``pip``
   (plus development headers, sometimes separate as ``python3-devel``)
 - eSpeak (and its development headers, sometimes separate as ``espeak-devel``)
@@ -22,14 +22,20 @@ prerequisites:
 
 Optionally, there's some more advanced features you can enable, which need some of these dependencies:
 
-- A Google Cloud service account JSON key somewhere on your machine
-- A S3 bucket
+- A Google Cloud service account API key somewhere on your machine
 
 .. note::
    These still need to be documented properly.
 
 Automatic Installation
 ----------------------
+
+Before doing any installation, make sure you have Elixir's package manager
+scripts downloaded locally! Run this command to do so:
+
+.. code-block:: shell
+
+   mix local.hex
 
 If you have all of the prerequisites installed, you can try cloning the repository and running our automatic
 setup script:
@@ -43,23 +49,19 @@ setup script:
    script/localsetup
 
 This will set up everything for you, the only thing you need to do yourself is fill
-in the config file.
+in the config file for Aph and run the database setup. The config file can be
+found in `aph/config/dev.exs`. This is where you fill in your database
+credentials. After you're done doing that, you can then run the database setup:
+
+.. code-block:: shell
+
+   cd aph
+   mix ecto.create
 
 Manual Installation
 -------------------
 
-After you've installed Rust, you should also install ``diesel-cli``, which is what
-powers our database management:
-
-.. code-block:: shell
-
-   cargo install diesel_cli --no-default-features --features postgres
-
-If you want to locally develop, I recommend that you also install ``cargo-watch``, which
-makes it possible to automatically rerun Cargo commands when you edit a file. You can install it
-with a simple ``cargo install cargo-watch``.
-
-You'll also want to install ``aeneas``, which parses text for us (this needs
+You'll want to install ``aeneas``, which parses text for us (this needs
 ffmpeg and espeak installed and available):
 
 .. code-block:: shell
@@ -67,45 +69,55 @@ ffmpeg and espeak installed and available):
    pip3 install --user numpy
    pip3 install --user aeneas
 
+Check that it's installed correctly:
+
+.. code-block:: shell
+
+   python3 -m aeneas.diagnostics
+
 Then, you can clone the repository.
 
 .. code-block:: shell
 
    git clone https://github.com/tometoproject/tometo
 
-Once you're in the directoy, you'll want to install the dependencies:
+Once you're in the directoy, you'll want to install the dependencies for the frontend:
 
 .. code-block:: shell
 
    npm install
 
-Next, to create the necessary database tables and configuration, do this:
+And the backend:
 
 .. code-block:: shell
 
-   cd otemot/
-   DATABASE_URL=<your database url> diesel setup
+   cd aph
+   mix deps.get
 
-As a final step, you should copy the example config file:
+Next, to create the necessary database tables and configuration, fill in your
+database configuration in ``aph/config/dev.exs`` (be careful not to accidentally
+check your changes into Git) and run this:
 
 .. code-block:: shell
 
-   cp config.example.toml config.toml
+   cd aph
+   mix ecto.create
+
+As a final step, you should copy the example config file for the frontend:
+
+.. code-block:: shell
+
+   cp .env.example .env
 
 Configuration
 -------------
 
-Configuration is done through a central config file called ``config.toml``, which
-provides configuration for both components.
+Configuration is (unfortunately) different for frontend and backend. The
+frontend loads environment variables either through you directly setting them or
+through ``.env``, while Aph loads its own config contained in ``aph/config/``.
 
-Don't worry about your config file getting put into version control, it's ignored
-by default.
-
-The config file should have documentation for every option.
-
-If you want to override config variables temporarily, you can set environment variables
-to match them. For example, to set the ``otemot.secrets.cookie`` key, you would set the
-``OTEMOT_SECRETS_COOKIE`` variable.
+.. note::
+   TODO: Add production configuration info here
 
 Running
 -------
