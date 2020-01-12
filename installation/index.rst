@@ -42,9 +42,9 @@ setup script:
 
 .. code-block:: shell
 
-   git clone git@github.com:tometoproject/tometo.git
+   git clone ssh://vcs@marisa.cloud:2222/source/tometo.git
    # or with HTTPS
-   git clone https://github.com/tometoproject/tometo.git
+   git clone https://marisa.cloud/source/tometo.git
    cd tometo/
    script/localsetup
 
@@ -79,7 +79,7 @@ Then, you can clone the repository.
 
 .. code-block:: shell
 
-   git clone https://github.com/tometoproject/tometo
+   git clone https://marisa.cloud/source/tometo.git
 
 Once you're in the directoy, you'll want to install the dependencies for the frontend:
 
