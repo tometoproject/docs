@@ -22,7 +22,7 @@ prerequisites:
 
 Optionally, there's some more advanced features you can enable, which need some of these dependencies:
 
-- A Google Cloud service account API key somewhere on your machine
+- A Google Cloud service account API key that has access to the Text-To-Speech API
 
 .. note::
    These still need to be documented properly.
@@ -50,7 +50,7 @@ setup script:
 
 This will set up everything for you, the only thing you need to do yourself is fill
 in the config file for Aph and run the database setup. The config file can be
-found in `aph/config/dev.exs`. This is where you fill in your database
+found in `aph/config/config.exs`. This is where you fill in your database
 credentials. After you're done doing that, you can then run the database setup:
 
 .. code-block:: shell
@@ -94,16 +94,21 @@ And the backend:
    cd aph
    mix deps.get
 
+Now you can go ahead and copy the backend configuration file:
+
+.. code-block:: shell
+
+   cp aph/config/config.example.exs aph/config/config.exs
+
 Next, to create the necessary database tables and configuration, fill in your
-database configuration in ``aph/config/dev.exs`` (be careful not to accidentally
-check your changes into Git) and run this:
+database configuration in ``aph/config/config.exs`` and run this:
 
 .. code-block:: shell
 
    cd aph
    mix ecto.create
 
-As a final step, you should copy the example config file for the frontend:
+As a final step, you should copy the example config files:
 
 .. code-block:: shell
 
