@@ -6,6 +6,7 @@ Welcome to Tometo's documentation!
    :caption: Contents:
 
    installation/index
+   technical/api
    contributing/index
    contributing/releasing
    conduct/index
