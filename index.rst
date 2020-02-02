@@ -9,6 +9,7 @@ This is the central documentation for the `Tometo <https://tometo.org>`_ project
 
   installation
   contributing/index
+  contributing/bug
   contributing/releasing
   phabricator/index
   phabricator/projects

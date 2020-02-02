@@ -1,12 +1,12 @@
 Phabricator
 ===========
 
-.. contents::
-
 Phabricator is the software we use for development. It can be found at
 https://marisa.cloud (the website is called marisa dot cloud, but it uses the
 software called Phabricator). This page explains a couple of common things you
 might want to do in Phabricator.
+
+.. _phab-creating-account:
 
 Creating an account
 -------------------
