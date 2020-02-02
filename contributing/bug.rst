@@ -2,14 +2,14 @@ How to report a bug
 ===================
 
 These guidelines explain how to write a good bug report or feature request (a
-task) in Tometo's task tracker (see :doc:`Phabricator </phabricator/index>` for
+task) in Tometo's task tracker (see :doc:`Phabricator </phabricator/help>` for
 more information). Well-written tasks are more likely to be worked on quickly.
 
 Quick recommendations
 ---------------------
 
 - Be clear
-- Be clear: explain how to reproduce the problem, step by step, so others can
+- Explain how to reproduce the problem, step by step, so others can
   reproduce the bug, or understand the request.
 - Include only one problem per task
 - Include any relevant links and examples

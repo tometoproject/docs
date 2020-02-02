@@ -2,7 +2,7 @@ Code Review
 ===========
 
 *Differential* is the code review tool in Phabricator. It's used to land most
-significant code-changed into Tometo codebases. Along with Differential,
+significant code-changes into Tometo codebases. Along with Differential,
 *Arcanist* is used to push your local changes to Differential, opening a new
 *revision* (basically a pull request) as a result.
 
