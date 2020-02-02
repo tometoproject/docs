@@ -1,14 +1,17 @@
 Welcome to Tometo's documentation!
 ==================================
 
+This is the central documentation for the `Tometo <https://tometo.org>`_
+project. You can use the sidebar to navigate this page!
+
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :hidden:
+  :maxdepth: 1
 
-   installation/index
-   technical/api
-   contributing/index
-   contributing/releasing
-   conduct/index
-
-This is the central documentation for the `Tometo <https://tometo.org>`_ project.
+  installation
+  contributing/index
+  contributing/bug
+  contributing/releasing
+  phabricator/index
+  technical/api
+  conduct

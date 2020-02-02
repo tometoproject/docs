@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Tometo'
-copyright = '2019, Marisa'
-author = 'Marisa'
+copyright = '2020, Tometo Core Team'
+author = 'Tometo Core Team'
 
 
 # -- General configuration ---------------------------------------------------
