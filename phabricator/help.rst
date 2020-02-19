@@ -2,8 +2,7 @@ Phabricator Help
 ================
 
 Phabricator is the software we use for development. It can be found at
-https://marisa.cloud (the website is called marisa dot cloud, but it uses the
-software called Phabricator). This page explains a couple of common things you
+https://git.tometo.org. This page explains a couple of common things you
 might want to do in Phabricator.
 
 .. _phab-creating-account:
@@ -17,14 +16,14 @@ Creating an account directly
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To create an account via Phabricator itself, visit `this page
-<https://marisa.cloud/auth/register/>`_. You should then get an email with which
+<https://git.tometo.org/auth/register/>`_. You should then get an email with which
 you can confirm your account.
 
 Creating an account via GitHub
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can also log in via your GitHub account by clicking the GitHub logo on `this
-page <https://marisa.cloud/auth/start/>`_.
+page <https://git.tometo.org/auth/start/>`_.
 
 Troubleshooting
 ^^^^^^^^^^^^^^^
@@ -37,7 +36,7 @@ Receiving updates and notifications
 -----------------------------------
 
 Phabricator notifies you about relevant activity, including `your own actions
-<https://marisa.cloud/settings/panel/emaildelivery/>`_.
+<https://git.tometo.org/settings/panel/emaildelivery/>`_.
 
 Phabricator offers several tools to receive the notifications you wish to receive.
 
@@ -57,7 +56,7 @@ If you receive unexpected mail notifications for a task:
 - You might watch a project associated to that task. A list of all projects that
   you watch is available.
 - In your `email preferences
-  <https://marisa.cloud/settings/panel/emailpreferences/>`_ under "Maniphest
+  <https://git.tometo.org/settings/panel/emailpreferences/>`_ under "Maniphest
   Tasks", you might have enabled "One of a task's subtasks changes status".
 - You might have a personal Herald rule set up. Check the "X-Herald-Rules"
   message header field to see a list of all applied Herald rules.

@@ -26,7 +26,7 @@ it has already been fixed.
 Has someone else already reported the issue?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Use the search box of `Tometo's bugtracker <https://marisa.cloud>`_ to see if
+Use the search box of `Tometo's bugtracker <https://git.tometo.org>`_ to see if
 your bug has already been reported, or the feature requested. You can also
 perform more advanced searches on the advanced search page.
 
@@ -39,7 +39,7 @@ Reporting a new bug or feature request
 If you have faced a bug in a recent version and no one else appears to have
 reported it, then:
 
-1. Go to https://marisa.cloud
+1. Go to https://git.tometo.org
 2. You will have to log in (or register) if you haven't already done so (see
    :ref:`phab-creating-account`)
 3. Click the bookmark button in the upper right corner and choose "Create Tometo

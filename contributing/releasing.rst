@@ -11,7 +11,7 @@ Basics
 Right now, a Tometo release is basically just:
 
 - A tag in the source repository (something like ``0.4.2``)
-- A corresponding post on the `Tometo Release Blog <https://marisa.cloud/phame/blog/view/1/>`_
+- A corresponding post on the `Tometo Release Blog <https://git.tometo.org/phame/blog/view/1/>`_
 - For larger releases (such as `0.x` or `x.0`), a post on the main Tometo
   website at https://tometo.org
 
@@ -42,7 +42,7 @@ Writing a release post
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Every release, even minor ones, should have a post on the
-`Release Blog <https://marisa.cloud/phame/blog/view/1/>`_. Assuming you have
+`Release Blog <https://git.tometo.org/phame/blog/view/1/>`_. Assuming you have
 correct permissions to create blog posts there, the minimum a blog post should
 contain is a changelog that lists all features, bug fixes and enhancements,
 ESPECIALLY the ones that were made by people outside of the usual committers.
