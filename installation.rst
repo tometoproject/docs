@@ -1,9 +1,67 @@
 Installation
-============
+############
 
-Tometo is functionally split into two parts — the frontend, which is a Vue.js
-app that's kept in the ``./ui``, and the backend called Aph, which is an Elixir app that's
-kept in the ``./aph`` folder.
+Installation can be done either in a `Vagrant <https://vagrantup.com>`_ virtual
+machine or locally, directly on your machine. The upside to Vagrant is that it
+uses an automated provisioning script, which means no having to install
+dependencies or even setting up the project. You run two commands, and then you
+have a fully functioning setup of Tometo.
+
+The downside is that it *is* a virtual machine -- it's not truly on your
+computer, but running inside an emulated Ubuntu VM. Doing that can stress your
+RAM and CPU, so if you don't have a computer with modern-day decent specs, you
+might be better off directly installing Tometo. I would still recommend you to
+give Vagrant a try though, and if it runs super sluggish, you can still switch
+to locally running.
+
+Via Vagrant
+===========
+
+First, you want to `download Vagrant
+<https://www.vagrantup.com/downloads.html>`_. On most systems, Vagrant uses
+`VirtualBox <https://www.virtualbox.org/>`_ in the background, so you'll want to
+install that too, unless you already have another hypervisor installed (don't
+worry if you don't know what that is - neither do I).
+
+Next, download the source code. If you have `Git <https://git-scm.org>`_
+installed, you can clone the repository like this:
+
+.. code-block:: shell
+
+   git clone https://git.tometo.org/source/tometo.git
+
+If you don't want to install Git or have no idea what that is, our GitHub mirror
+provides a ZIP download `here <https://github.com/tometoproject/tometo/archive/master.zip>`_.
+
+Once you have it downloaded and extracted to somewhere you like, open a Terminal
+(cmd.exe or PowerShell on Windows) in the folder you extracted the code to and
+run this:
+
+.. code-block:: shell
+
+   vagrant up
+
+This **will** take a while, so maybe make some tea in the meantime. Once it's
+done, you can run this:
+
+.. code-block:: shell
+
+   vagrant ssh
+
+You're now in a full Ubuntu Linux virtual machine that just so happens to have
+Tometo installed into it! The cool thing about this is that all of the changes
+you make in the directory you downloaded Tometo into will automatically appear
+on that virtual machine. You can now use the Tometo command-line scripts to
+start the server, like this:
+
+.. code-block:: shell
+
+   script/watch
+
+See also the "Running" section at the bottom of this page.
+
+Locally
+=======
 
 Prerequisites
 -------------
@@ -50,7 +108,7 @@ setup script:
 
 This will set up everything for you, the only thing you need to do yourself is fill
 in the config file for Aph and run the database setup. The config file can be
-found in `aph/config/config.exs`. This is where you fill in your database
+found in ``aph/config/config.exs``. This is where you fill in your database
 credentials. After you're done doing that, you can then run the database setup:
 
 .. code-block:: shell
