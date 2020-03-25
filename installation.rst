@@ -166,12 +166,6 @@ database configuration in ``aph/config/config.exs`` and run this:
    cd aph
    mix ecto.create
 
-As a final step, you should copy the example config files:
-
-.. code-block:: shell
-
-   cp .env.example .env
-
 Configuration
 -------------
 
@@ -190,6 +184,8 @@ These include:
 
 - ``script/build``: Runs a production build
 - ``script/lint``: Makes sure your code looks nice and is ready to commit
+- ``script/fix``: Automatically corrects your code based on our linting rules
+  (this modifies your actual code files)
 - ``script/run``: Runs both the frontend and the backend
 - ``script/run_b``: Runs only the backend
 - ``script/run_f``: Runs only the frontend

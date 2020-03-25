@@ -54,5 +54,5 @@ Always use brackets around method calls, it's cleaner and easier to understand.
 Piping is usually not worth it when it's only a single pipe (unless you're
 working with a ``conn`` struct).
 
-Linting can be done via ``script/lint``, or by explicitly cd-ing into the aph/
-subdirectory and running ``mix format`` there.
+Linting can be done via ``script/lint``, or, if you want to directly fix
+potential formatting mishaps, ``script/fix``.
