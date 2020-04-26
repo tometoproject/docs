@@ -12,7 +12,7 @@ computer, but running inside an emulated Ubuntu VM. Doing that can stress your
 RAM and CPU, so if you don't have a computer with modern-day decent specs, you
 might be better off directly installing Tometo. I would still recommend you to
 give Vagrant a try though, and if it runs super sluggish, you can still switch
-to locally running.
+to running it directly on your computer.
 
 Via Vagrant
 ===========
@@ -58,6 +58,13 @@ start the server, like this:
 
    script/watch
 
+Or, if you want to skip the ``vagrant ssh`` step, you can directly start it from
+your computer:
+
+.. code-block:: shell
+
+   script/vagrant-watch
+
 See also the "Running" section at the bottom of this page.
 
 Locally
@@ -69,11 +76,11 @@ Prerequisites
 In order to get the system running on your computer, you'll need some
 prerequisites:
 
-- Git
-- A PostgreSQL server, and its development headers (sometimes called ``libpq-dev`` or ``postgresql-devel``)
-- Elixir (and Erlang, but usually those two are installed side-by-side)
-- Node.js, the latest LTS or Stable version should work
-- Python 3 and ``pip``
+- `Git <https://git-scm.org>`_
+- A `PostgreSQL <https://postgresql.org>`_ server, and its development headers (sometimes called ``libpq-dev`` or ``postgresql-devel``)
+- `Elixir <https://elixir-lang.org>`_ (and Erlang, but usually those two are installed side-by-side)
+- `Node.js <https://nodejs.org>`_, the latest LTS or Stable version should work
+- `Python 3 <https://python.org>`_ and ``pip``
   (plus development headers, sometimes separate as ``python3-devel``)
 - eSpeak (and its development headers, sometimes separate as ``espeak-devel``)
 - FFmpeg
@@ -169,12 +176,15 @@ database configuration in ``aph/config/config.exs`` and run this:
 Configuration
 -------------
 
-Configuration is (unfortunately) different for frontend and backend. The
-frontend loads environment variables either through you directly setting them or
-through ``.env``, while Aph loads its own config contained in ``aph/config/``.
+Configuration is separate for the frontend and the backend, but most likely you won't need to
+modify the frontend's config at all. The backend config can be found within ``aph/config/config.exs``.
+For the frontend, you can set the environment variables described in the `webpack.config.js
+<https://git.tometo.org/source/tometo/browse/master/ui/webpack.config.js$9>`_ file. The easiest way of
+doing this is by creating a ``.env`` file in the project root. However, the defaults should
+work for most development purposes.
 
 .. note::
-   TODO: Add production configuration info here
+   TODO: Add production configuration info
 
 Running
 -------

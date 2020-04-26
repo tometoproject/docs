@@ -20,7 +20,7 @@ Before you do anything
 Can you reproduce the issue?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Try to reproduce your bug using a recent version of the software, to see whether
+Try to reproduce your bug using a recent version of Tometo (most likely a ``master`` checkout), to see whether
 it has already been fixed.
 
 Has someone else already reported the issue?
@@ -35,7 +35,6 @@ bug. It is better to have duplicate bugs than it is to have unreported bugs.
 
 Reporting a new bug or feature request
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 If you have faced a bug in a recent version and no one else appears to have
 reported it, then:
 
@@ -79,11 +78,11 @@ reported it, then:
       - Whether the problem appears every time, only occasionally, only on
         certain pages, or only under specific circumstances
 
-    - To attack a log file or a screenshot, click the **Upload File** button (a
+    - To attach a log file or a screenshot, click the **Upload File** button (a
       cloud with an arrow) in the toolbar of the Description field.
     - Select the **projects** that are relevant for this bug:
 
-      - The default projects are *tometo-triage* (this is important to leave)
+      - The default projects are *triage* (this is important to leave)
         and *tometo* (you should leave this unless the bug has nothing to do
         with the core Tometo software).
       - If any other teams might be interested in this, or if the bug appeared

@@ -18,7 +18,7 @@ first :doc:`create a task for it </contributing/bug>` and then make a
 Bug Reports
 -----------
 
-While we wish everything in here worked perfectly, bugs are natural to occur.
+While we wish everything worked perfectly, bugs are natural to occur.
 This is why we recommend that, even when you're not sure it's a bug, to report it anyways.
 
 Please see :doc:`How to report a bug </contributing/bug>` for more info about

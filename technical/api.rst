@@ -15,7 +15,7 @@ We follow the RESTful API standards. This means a couple of things:
 - Routes should be:
   - Plural unless referring to a singleton object (``/api/statuses``,
     ``/api/users``)
-  - Usable by multiple methods (``GET /api/users``, ``POST /api/users``
+  - Usable by multiple methods (``GET /api/users``, ``POST /api/users``)
   - Used for specific cases only when it's unavoidable (``/api/users/:id/invitations``)
 - When returning an error, put it in this format:
 
@@ -34,8 +34,23 @@ We follow the RESTful API standards. This means a couple of things:
 General Elixir/Phoenix recommendations
 --------------------------------------
 
+Phoenix Views
+^^^^^^^^^^^^^
+Views can either use preloaded data, render different views, render many items, or not render
+much at all. This can get confusing quickly, which is why we have some standard naming practices for
+the ``render`` function in our views:
+
+Say we've got an example entity called ``Book`` that has a 1-to-many relation with both ``Page`` and ``Word``. The ``book_view.ex`` could include the following:
+
+- ``book.json`` for a MINIMAL version of the entity with no preloads, but all keys (including timestamps).
+- ``book_with_page.json`` for ``book.json`` but with a ``Page`` preloaded.
+- ``book_full.json`` for ``book.json`` with every foreign resource preloaded.
+
 We don't use a ``data`` key in views, like the Phoenix generators would like you
 to believe. Most things in our JSON returns are top-level.
+
+Other Things
+^^^^^^^^^^^^
 
 ``AphWeb.ErrorView`` contains the most common error codes. Some of them accept
 custom messages, some don't — feel free to modify one to include a message, just

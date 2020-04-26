@@ -12,7 +12,7 @@ We provide documentation for a couple of different things:
   to that :doc:`here!</contributing/index>`
 - **Questions about Phabricator, our internal development platform?** We have
   some extensive :doc:`guides available!<phabricator/index>`
-- We also provide some :doc:`**technical details about our code structure**<technical/api>`.
+- We also provide some :doc:`technical details about our code structure<technical/api>`.
 
 .. toctree::
   :hidden:
