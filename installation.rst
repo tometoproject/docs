@@ -115,7 +115,7 @@ setup script:
 
 This will set up everything for you, the only thing you need to do yourself is fill
 in the config file for Aph and run the database setup. The config file can be
-found in ``config/config.exs``. This is where you fill in your database
+found in ``config/dev.exs``. This is where you fill in your database
 credentials. After you're done doing that, you can then run the database setup:
 
 .. code-block:: shell
@@ -161,10 +161,10 @@ Now you can go ahead and copy the backend configuration file:
 
 .. code-block:: shell
 
-   cp config/config.example.exs config/config.exs
+   cp config/dev.example.exs config/dev.exs
 
 Next, to create the necessary database tables and configuration, fill in your
-database configuration in ``config/config.exs`` and run this:
+database configuration in ``config/dev.exs`` and run this:
 
 .. code-block:: shell
 
@@ -174,7 +174,7 @@ Configuration
 -------------
 
 Configuration is separate for the frontend and the backend, but most likely you won't need to
-modify the frontend's config at all. The backend config can be found within ``config/config.exs``.
+modify the frontend's config at all. The backend config can be found within ``config/dev.exs``.
 For the frontend, you can set the environment variables described in the `webpack.config.js
 <https://git.tometo.org/source/tometo/browse/master/ui/webpack.config.js$9>`_ file. The easiest way of
 doing this is by creating a ``.env`` file in the project root. However, the defaults should
