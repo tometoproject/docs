@@ -56,14 +56,15 @@ Other Things
 custom messages, some don't — feel free to modify one to include a message, just
 be sure to check where else the error is being used from first!
 
-When you want to make sure that only logged in users can access a route, do
-this:
+When you want to make sure that only logged in users can access a route, you can
+put your route in one of the authorization scopes in ``lib/aph_web/router.ex``. The
+scopes that exist are as follows:
 
-.. code-block:: elixir
+- ``:redirect_if_user_is_authenticated``: Makes sure the user is **not** logged in
+- ``:required_authenticated_user``: Makes sure the user is logged in
+- ``:require_admin_or_mod_user``: Makes sure the user is logged in and at least a mod
 
-   use AphWeb.Authorize
-
-   plug :user_check when action in [:your_action_name]
+The other API pipeline is generic, and can be used without regard to any authorization.
 
 Always use brackets around method calls, it's cleaner and easier to understand.
 Piping is usually not worth it when it's only a single pipe (unless you're

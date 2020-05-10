@@ -56,14 +56,14 @@ start the server, like this:
 
 .. code-block:: shell
 
-   script/watch
+   script/run
 
 Or, if you want to skip the ``vagrant ssh`` step, you can directly start it from
 your computer:
 
 .. code-block:: shell
 
-   script/vagrant-watch
+   script/vagrant-run
 
 See also the "Running" section at the bottom of this page.
 
@@ -115,12 +115,11 @@ setup script:
 
 This will set up everything for you, the only thing you need to do yourself is fill
 in the config file for Aph and run the database setup. The config file can be
-found in ``aph/config/config.exs``. This is where you fill in your database
+found in ``config/config.exs``. This is where you fill in your database
 credentials. After you're done doing that, you can then run the database setup:
 
 .. code-block:: shell
 
-   cd aph
    mix ecto.create
 
 Manual Installation
@@ -156,28 +155,26 @@ And the backend:
 
 .. code-block:: shell
 
-   cd aph
    mix deps.get
 
 Now you can go ahead and copy the backend configuration file:
 
 .. code-block:: shell
 
-   cp aph/config/config.example.exs aph/config/config.exs
+   cp config/config.example.exs config/config.exs
 
 Next, to create the necessary database tables and configuration, fill in your
-database configuration in ``aph/config/config.exs`` and run this:
+database configuration in ``config/config.exs`` and run this:
 
 .. code-block:: shell
 
-   cd aph
    mix ecto.create
 
 Configuration
 -------------
 
 Configuration is separate for the frontend and the backend, but most likely you won't need to
-modify the frontend's config at all. The backend config can be found within ``aph/config/config.exs``.
+modify the frontend's config at all. The backend config can be found within ``config/config.exs``.
 For the frontend, you can set the environment variables described in the `webpack.config.js
 <https://git.tometo.org/source/tometo/browse/master/ui/webpack.config.js$9>`_ file. The easiest way of
 doing this is by creating a ``.env`` file in the project root. However, the defaults should
@@ -196,7 +193,6 @@ These include:
 - ``script/lint``: Makes sure your code looks nice and is ready to commit
 - ``script/fix``: Automatically corrects your code based on our linting rules
   (this modifies your actual code files)
-- ``script/run``: Runs both the frontend and the backend
+- ``script/run``: Runs both the frontend and the backend and watched for changes. This is what you want most of the time.
 - ``script/run_b``: Runs only the backend
 - ``script/run_f``: Runs only the frontend
-- ``script/watch``: Runs and watches for changes for the frontend and backend. This is what you want most of the time.

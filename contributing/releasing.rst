@@ -23,7 +23,7 @@ number changes. That's basically all that's required code-wise. Change the
 version numbers in these places:
 
 - ``package.json``
-- ``aph/mix.exs``
+- ``mix.exs``
 
 Call the commit the version number, and create a tag that refers to that commit:
 
